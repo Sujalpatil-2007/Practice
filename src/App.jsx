@@ -37,14 +37,12 @@ const App = () => {
     // cleanup on unmount
     return () => {
       window.removeEventListener("mousemove", positionSet);
-      window.removeEventListener("scroll", scrollHandler);
     };
   }, []);
 
   useEffect(() => {
     const positionSet = (e) => {
       
-
       gsap.to("#circle", {
         x: e.clientX - 10,
         y: e.clientY - 10,
@@ -62,17 +60,11 @@ const App = () => {
       });
     };
 
-    const scrollHandler = () => {
-      console.log("scrolling…");
-    };
-
     window.addEventListener("mousemove", positionSet);
-    window.addEventListener("scroll", scrollHandler);
 
     // cleanup on unmount
     return () => {
       window.removeEventListener("mousemove", positionSet);
-      window.removeEventListener("scroll", scrollHandler);
     };
   }, []);
 
