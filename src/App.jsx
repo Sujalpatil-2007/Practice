@@ -13,14 +13,14 @@ const App = () => {
       if (currentScrollY > lastScrollY.current) {
         gsap.to('.nav',{
           top:-40,
-          duration:1,
+          duration:0.5,
           ease:"back.in"
         })
 
       } else if (currentScrollY < lastScrollY.current) {
         gsap.to('.nav',{
           top:0,
-          duration:1,
+          duration:0.5,
           ease:"back.in"
         })
       }
