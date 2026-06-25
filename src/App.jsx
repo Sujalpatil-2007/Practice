@@ -21,7 +21,7 @@ const App = () => {
         gsap.to('.nav',{
           top:0,
           duration:0.5,
-          ease:"back.in"
+          ease:"back.out"
         })
       }
 
