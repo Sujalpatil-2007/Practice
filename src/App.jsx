@@ -1,89 +1,35 @@
-import React, { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
+import React, { useRef } from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 const App = () => {
-  const [position, setPosition] = useState({ X: 0, Y: 0 });
 
-  const lastScrollY = useRef(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY.current) {
-        gsap.to('.nav',{
-          top:-40,
-          duration:0.5,
-          ease:"back.in"
-        })
-
-      } else if (currentScrollY < lastScrollY.current) {
-        gsap.to('.nav',{
-          top:0,
-          duration:0.5,
-          ease:"back.out"
-        })
-      }
-
-      lastScrollY.current = currentScrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-
-    // cleanup on unmount
-    return () => {
-      window.removeEventListener("mousemove", positionSet);
-    };
-  }, []);
-
-  useEffect(() => {
-    const positionSet = (e) => {
+  useGSAP(()=>{
+    const tl = gsap.timeline()
+    tl.from('#circle',{
+      x:-200,
+      y:-150,
+      opacity:0,
+      duration:1,
       
-      gsap.to("#circle", {
-        x: e.clientX - 10,
-        y: e.clientY - 10,
-        duration: 1.2,
-        ease: "back.out",
-        opacity: 1,
-      });
-
-      gsap.to("#dot", {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 1,
-        ease: "back.out",
-        opacity: 1,
-      });
-    };
-
-    window.addEventListener("mousemove", positionSet);
-
-    // cleanup on unmount
-    return () => {
-      window.removeEventListener("mousemove", positionSet);
-    };
-  }, []);
+    },'same')
+    tl.from('#square',{
+      x:200,
+      y:-150,
+      opacity:0,
+      duration:1,
+      
+    },'same')
+  })
 
   return (
-    <>
-      <div className="nav bg-red-400 fixed h-10 w-full"></div>
-      <div className="bg-[#2b2727] overflow-hidden min-h-screen w-screen">
-        <div
-          id="circle"
-          className="border-2 border-amber-400 opacity-0 fixed rounded-full h-7 w-7"
-        ></div>
-        <div
-          id="dot"
-          className="h-2 w-2 bg-amber-300 opacity-0 fixed rounded-full"
-        ></div>
-      </div>
-      <div className="h-screen w-full bg-rose-400"></div>
-    </>
-  );
-};
+    <main className='min-h-screen w-screen relative bg-gray-500'>
+      <div id='circle' className='bg-amber-300 h-20 w-20 rounded-full absolute top-5 left-32 '></div>
+      <div  id='square' className='bg-amber-300 h-20 w-20 rounded absolute rotate-12 top-5 right-32 '></div>
+      <div id='diamand' className='bg-amber-300 h-20 w-20 rounded absolute rotate-45 top-1/2 right-1/2 '></div>
 
-export default App;
+    </main>
+  )
+}
+
+export default App
