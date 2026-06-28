@@ -13,12 +13,10 @@ const App = () => {
       duration:1,
       ease:'circ'
     })
-    
   }
 
   useGSAP(() => {
     const firstLink = document.querySelector(".nav-link");
-
     gsap.set(navSlide.current, {
       x: firstLink.offsetLeft,
       width: firstLink.offsetWidth,
