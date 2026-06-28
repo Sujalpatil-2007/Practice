@@ -37,10 +37,16 @@ const App = () => {
 
   return (
     <main className='min-h-screen w-screen relative overflow-hidden bg-gray-500'>
-      <div id='circle' className='bg-amber-300 h-20 w-20 rounded-full absolute top-5 left-32 '></div>
-      <div  id='square' className='bg-amber-300 h-20 w-20 rounded absolute rotate-12 top-5 right-32 '></div>
-      <div id='diamand' className='bg-amber-300  h-20 w-20 rounded absolute opacity-0 rotate-45 top-1/2 right-1/2 '></div>
-
+      <div className='h-10 w-full flex justify-between items-center p-5 bg-amber-300 '>
+        <div>Logo</div>
+        <div className='flex gap-3 border px-3 py-1 rounded-md '>
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="">Project</a>
+          <a href="">Contact</a>
+        </div>
+        <div>Let's Talk</div>
+      </div>
     </main>
   )
 }
