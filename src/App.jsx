@@ -41,6 +41,10 @@ const App = () => {
     <div id='About' className='h-screen w-screen bg-amber-400'><h1>About</h1></div>
     <div id='Project' className='h-screen w-screen bg-amber-500'><h1>Projects</h1></div>
     <div id='Contact' className='h-screen w-screen bg-amber-600'><h1>Contact</h1></div>
+    {/* demo */}
+    <div>
+      <h1>Hii</h1>
+    </div>
   </>
   )
 }
