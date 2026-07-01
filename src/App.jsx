@@ -61,9 +61,6 @@ const App = () => {
       <div>
         <h1>Hii</h1>
       </div>
-      <form>
-        <input type="text" />
-      </form>
     </>
   );
 };
