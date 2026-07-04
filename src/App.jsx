@@ -58,6 +58,10 @@ const App = () => {
         <h1>Contact</h1>
       </div>
       <h1>hii</h1>
+      {/* hero  */}
+      <section>
+
+      </section>
     </>
   );
 };
