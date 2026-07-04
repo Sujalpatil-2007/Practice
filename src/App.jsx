@@ -57,7 +57,6 @@ const App = () => {
       <div id="Contact" className="h-screen w-screen bg-amber-600">
         <h1>Contact</h1>
       </div>
-      <h1>hii</h1>
     </>
   );
 };
