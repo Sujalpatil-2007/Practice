@@ -47,14 +47,15 @@ const App = () => {
           </div>
           <div>Let's Talk</div>
         </div>
+        <h1 className="h-screen w-screen flex justify-center items-center">Home</h1>
       </main>
-      <div id="About" className="h-screen w-screen bg-amber-400">
+      <div id="About" className="h-screen w-screen flex justify-center items-center bg-amber-400">
         <h1>About</h1>
       </div>
-      <div id="Project" className="h-screen w-screen bg-amber-500">
+      <div id="Project" className="h-screen w-screen flex justify-center items-center bg-amber-500">
         <h1>Projects</h1>
       </div>
-      <div id="Contact" className="h-screen w-screen bg-amber-600">
+      <div id="Contact" className="h-screen w-screen flex justify-center items-center bg-amber-600">
         <h1>Contact</h1>
       </div>
     </>
