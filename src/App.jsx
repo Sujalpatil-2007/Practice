@@ -22,6 +22,7 @@ const App = () => {
     });
   });
 
+  
   return (
     <>
       <main id="Home" className="min-h-screen w-screen  bg-gray-500">
