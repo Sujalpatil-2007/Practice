@@ -2,9 +2,9 @@ import React from 'react'
 
 const App = () => {
   return (
-    <div>
-      new
-    </div>
+    <main className='h-screen w-screen bg-gray-500 '>
+
+    </main>
   )
 }
 
