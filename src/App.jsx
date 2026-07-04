@@ -60,7 +60,7 @@ const App = () => {
       <h1>hii</h1>
       {/* hero  */}
       <section>
-
+        hello
       </section>
     </>
   );
