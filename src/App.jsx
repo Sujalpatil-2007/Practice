@@ -4,8 +4,11 @@ const App = () => {
   return (
     <section>
       <div>
-        hii
+        this is nav
       </div>
+      <footer>
+        This is footer
+      </footer>
     </section>
   )
 }
