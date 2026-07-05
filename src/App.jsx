@@ -4,8 +4,8 @@ const App = () => {
   return (
     <main className='h-screen w-screen bg-gray-500 '>
         <section>
-          <h1>Hello word</h1>
-          <p>This is testing</p>
+          <h1 className='text-5xl font-bold'>Hello word</h1>
+          <p className='text-2xl font-semibold'>This is testing</p>
         </section>
     </main>
   )
