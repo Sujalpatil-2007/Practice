@@ -8,6 +8,7 @@ const App = () => {
       <h3>hii</h3>
       <h4>hii</h4>
       <h5>hii</h5>
+      <h6>hii</h6>
     </div>
   )
 }
