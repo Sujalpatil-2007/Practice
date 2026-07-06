@@ -6,7 +6,6 @@ const App = () => {
       <h1>hii</h1>
       <h2>hii</h2>
       <h3>hii</h3>
-      <h4>hii</h4>
     </div>
   )
 }
