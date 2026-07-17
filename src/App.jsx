@@ -5,6 +5,7 @@ const App = () => {
     <div>
       <img src="" alt="Not found" />
       <h1>Hii</h1>
+      <p>I am practicing it</p>
     </div>
   )
 }
