@@ -3,7 +3,7 @@ import React from 'react'
 const App = () => {
   return (
     <div>
-      This is navbar
+      <h1>This is navbar</h1>
     </div>
   )
 }
